@@ -1,7 +1,10 @@
 package com.keyin.passenger;
 
+import com.keyin.city.City;
+
 import javax.persistence.*;
 
+@Entity
 public class Passenger {
 
     @Id
@@ -14,6 +17,9 @@ public class Passenger {
     private String lastName;
 
     private String phoneNumber;
+
+    @ManyToOne
+    private City city;
 
     public long getId() {
         return id;

@@ -1,6 +1,10 @@
 package com.keyin.airport;
 
+import com.keyin.aircraft.Aircraft;
+import com.keyin.city.City;
+
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Airport {
@@ -14,6 +18,13 @@ public class Airport {
     private String name;
 
     private String code;
+
+    @ManyToOne
+    private City city;
+
+    @OneToMany(mappedBy = "airport")
+    private List<Aircraft> aircrafts;
+
 
     public Long getId() {
         return id;

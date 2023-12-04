@@ -1,6 +1,7 @@
 package com.keyin.aircraft;
 
 import com.keyin.airport.Airport;
+import com.keyin.passenger.Passenger;
 
 import javax.persistence.*;
 import java.util.List;
@@ -20,8 +21,12 @@ public class Aircraft {
 
     private int numberOfPassengers;
 
+    @ManyToOne
+    private Airport airport;
+
     @ManyToMany
-    private List<Airport> airports;
+    private List<Passenger> passengers;
+
 
     public Long getId() {
         return id;

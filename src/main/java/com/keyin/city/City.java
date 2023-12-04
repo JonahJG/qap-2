@@ -1,6 +1,9 @@
 package com.keyin.city;
 
+import com.keyin.airport.Airport;
+
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class City {
@@ -16,6 +19,9 @@ public class City {
     private String state;
 
     private String population;
+
+    @OneToMany(mappedBy = "city")
+    private List<Airport> airports;
 
     public Long getId() {
         return id;

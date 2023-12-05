@@ -1,0 +1,8 @@
+version: '3'
+services:
+  qap2:
+    image: keyin/qap2-latest:latest
+    ports:
+      - 8080:8080
+    environment:
+      - spring.datasource.url=jdbc:mysql://host.docker.internal:3306/qap-2

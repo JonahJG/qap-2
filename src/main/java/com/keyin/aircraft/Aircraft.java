@@ -21,8 +21,8 @@ public class Aircraft {
 
     private int numberOfPassengers;
 
-    @ManyToOne
-    private Airport airport;
+    @ManyToMany
+    private List<Airport> airport;
 
     @ManyToMany
     private List<Passenger> passengers;
@@ -59,4 +59,5 @@ public class Aircraft {
     public void setNumberOfPassengers(int numberOfPassengers) {
         this.numberOfPassengers = numberOfPassengers;
     }
+
 }

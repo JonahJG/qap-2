@@ -1,7 +1,7 @@
 version: '3'
 services:
   qap2:
-    image: keyin/qap2-latest:latest
+    image: keyin/qap-2:latest
     ports:
       - 8080:8080
     environment:

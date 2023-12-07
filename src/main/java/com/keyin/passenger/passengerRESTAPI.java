@@ -8,10 +8,11 @@ import java.util.List;
 
 @RepositoryRestResource(collectionResourceRel = "passenger", path = "passenger")
 public interface passengerRESTAPI extends JpaRepository<Passenger, Long> {
-    public List<Passenger> findByFirstName(@RequestParam String name);
+    public List<Passenger> findByFirstName(String firstName);
 
-    public List<Passenger> findByLastName(@RequestParam String state);
+    public List<Passenger> findByLastName(String lastName);
 
-    public List<Passenger> findByPhoneNumber(@RequestParam String population);
+    public List<Passenger> findByPhoneNumber(String phoneNumber);
+
 
 }

@@ -9,9 +9,8 @@ import java.util.List;
 @RepositoryRestResource(collectionResourceRel = "airport", path = "airport")
 public interface AirportRESTAPI extends JpaRepository<Airport, Long> {
 
-    public List<Airport> findById(long id);
-
     public  List<Airport> findByName(String name);
 
     public List<Airport> findByCode(String code);
+
 }

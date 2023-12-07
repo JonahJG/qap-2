@@ -8,9 +8,15 @@ import java.util.List;
 
 @RepositoryRestResource(collectionResourceRel = "aircraft", path = "aircraft")
 public interface AircraftRESTAPI extends JpaRepository<Aircraft, Long> {
-    public List<Aircraft> findByType(@RequestParam String tailNumber);
 
-    public List<Aircraft> findByAirlineName(@RequestParam String tailNumber);
+    public List<Aircraft> findByType(String type);
 
-    public List<Aircraft> findByNumberOfPassengers(@RequestParam int numberOfPassengers);
+    public List<Aircraft> findByAirlineName(String airlineName);
+
+    public List<Aircraft> findByNumberOfPassengers(int numberOfPassengers);
+
+    public List<Aircraft> findByAirport_Id(Long airportId);
+
+    public List<Aircraft> findByPassengers_Id(Long passengerId);
+
 }

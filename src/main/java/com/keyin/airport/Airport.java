@@ -19,11 +19,13 @@ public class Airport {
 
     private String code;
 
-    @ManyToOne
+    @OneToOne
     private City city;
+
 
     @OneToMany(mappedBy = "airport")
     private List<Aircraft> aircrafts;
+
 
 
     public Long getId() {
@@ -48,6 +50,14 @@ public class Airport {
 
     public void setCode(String code) {
         this.code = code;
+    }
+
+    public City getCity() {
+        return city;
+    }
+
+    public void setCity(City city) {
+        this.city = city;
     }
 }
 
